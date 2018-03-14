@@ -1,0 +1,367 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019-01A strtok.save
+01B-01E _Randseed
+01F-020 ms
+021     MAIN.rxstat
+022-025 MAIN.rx_id
+026-02D MAIN.in_data
+02E     MAIN.rx_len
+02F-036 MAIN.out_data_sht
+037-03A MAIN.tx_idsht
+03B.0   MAIN.tx_rtr
+03B.1   MAIN.tx_ext
+03C     MAIN.tx_len
+03D     MAIN.tx_pri
+03E     MAIN.f
+03F-042 MAIN.tempp_sht
+043-046 MAIN.hump_sht
+047-04A MAIN.truetempsht
+04B-04E MAIN.truehumidsht
+04F-052 @PRINTF_L32D_38400_31766_31767FPFPF.P1
+04F-050 sht_rd.restemp
+04F     comreset.i
+04F-050 can_getd.data
+04F     can_set_mode.mode
+04F     can_init.@SCRATCH1
+04F     MAIN.@SCRATCH1
+04F     @PSTRINGC_38400_31766_31767.@SCRATCH1
+050     @PRINTF_X_38400_31766_31767.P1
+050     @delay_ms1.P2
+050     can_set_mode.@SCRATCH1
+050     MAIN.@SCRATCH2
+050     @PSTRINGC_38400_31766_31767.@SCRATCH2
+051     can_getd.i
+051-054 can_putd.id
+051-054 @PRINTF_L32U_38400_31766_31767.P1
+051-052 sht_rd.reshumid
+051     @PRINTF_X_38400_31766_31767.P1
+051     MAIN.@SCRATCH3
+052-053 can_getd.ptr
+052     MAIN.@SCRATCH4
+053     @PRINTF_L32D_38400_31766_31767FPFPF.P1
+053     @PRINTF_U_38400_31766_31767.P2
+053     @PSTRINGCN_38400_31766_31767.P3
+053-056 sht_rd.realhumid
+054     @PRINTF_U_38400_31766_31767.P1
+054     can_getd.@SCRATCH1
+054     @PSTRINGCN_38400_31766_31767.@SCRATCH1
+054     @PRINTF_L32D_38400_31766_31767FPFPF.@SCRATCH1
+055     @DIV88.P1
+055-056 can_putd.data
+055     can_getd.@SCRATCH2
+055     @PSTRINGCN_38400_31766_31767.@SCRATCH2
+055     @PRINTF_L32D_38400_31766_31767FPFPF.@SCRATCH2
+055     @PRINTF_L32U_38400_31766_31767.@SCRATCH1
+056     @DIV88.P1
+056     can_getd.@SCRATCH3
+056     @PRINTF_L32D_38400_31766_31767FPFPF.@SCRATCH3
+056     @PRINTF_L32U_38400_31766_31767.@SCRATCH2
+057     can_putd.len
+057     @PRINTF_L32D_38400_31766_31767FPFPF.@SCRATCH4
+057     @DIV88.@SCRATCH1
+057     @PRINTF_L32U_38400_31766_31767.@SCRATCH3
+058     can_putd.priority
+058     @PRINTF_L32D_38400_31766_31767FPFPF.@SCRATCH5
+058     @PRINTF_L32U_38400_31766_31767.@SCRATCH4
+059     can_putd.ext
+059     @PRINTF_L32D_38400_31766_31767FPFPF.@SCRATCH6
+059     @PRINTF_L32U_38400_31766_31767.@SCRATCH5
+05A     can_putd.rtr
+05A     @PRINTF_L32D_38400_31766_31767FPFPF.@SCRATCH7
+05A     @PRINTF_L32U_38400_31766_31767.@SCRATCH6
+05B     can_putd.i
+05B-05C can_get_id.addr
+05B     @PRINTF_L32D_38400_31766_31767FPFPF.@SCRATCH8
+05B     @PRINTF_L32U_38400_31766_31767.@SCRATCH7
+05C-05F @FTOSD.P1
+05C-05D can_putd.txd0
+05C     @PRINTF_L32U_38400_31766_31767.@SCRATCH8
+05D     can_get_id.ext
+05D-060 @DIV3232.P1
+05E-061 can_get_id.ret
+05E     can_putd.port
+05F-060 calculate_data.temp
+05F.0   measurehumid.ack
+05F-060 can_set_id.addr
+05F.0   measuretemp.ack
+05F     can_putd.@SCRATCH1
+060-061 measurehumid.iobyte
+060-061 measuretemp.iobyte
+060     can_putd.@SCRATCH2
+060     @FTOSD.@SCRATCH1
+061-062 calculate_data.humid
+061-064 can_set_id.id
+061-064 @DIV3232.P1
+061     can_putd.@SCRATCH3
+062     comwrite.iobyte
+062-063 can_get_id.ptr
+062-063 comwait.sht_delay
+062     comread.i
+062     measuretemp.@SCRATCH1
+062     measurehumid.@SCRATCH1
+063     comwrite.i
+063-064 comread.iobyte
+063-066 calculate_data.rh
+064     comwrite.mask
+064     can_get_id.@SCRATCH1
+065     can_set_id.ext
+065.0   comwrite.ack
+065     can_get_id.@SCRATCH2
+065     @DIV3232.@SCRATCH1
+066-067 can_set_id.ptr
+066     can_get_id.@SCRATCH3
+066     comwrite.@SCRATCH1
+066     @DIV3232.@SCRATCH2
+067     can_get_id.@SCRATCH4
+067     calculate_data.@SCRATCH1
+067     @DIV3232.@SCRATCH3
+068     can_set_id.@SCRATCH1
+068     can_get_id.@SCRATCH5
+068     calculate_data.@SCRATCH2
+068     @DIV3232.@SCRATCH4
+069     can_set_id.@SCRATCH2
+069     calculate_data.@SCRATCH3
+069     @DIV3232.@SCRATCH5
+06A     can_set_id.@SCRATCH3
+06A     calculate_data.@SCRATCH4
+06B     can_set_id.@SCRATCH4
+06B     calculate_data.@SCRATCH5
+06C     calculate_data.@SCRATCH6
+06D     calculate_data.@SCRATCH7
+06E     calculate_data.@SCRATCH8
+073-074 @ITOF.P1
+077-07A @ADDFF.P1
+07B-07E @MULFF.P1
+07B-07E @ADDFF.P2
+07F-082 @MULFF.P1
+07F     @ADDFF.@SCRATCH1
+080     @ADDFF.@SCRATCH2
+081     @ADDFF.@SCRATCH3
+082     @ADDFF.@SCRATCH4
+083     @MULFF.@SCRATCH1
+083     @ADDFF.@SCRATCH5
+084     @MULFF.@SCRATCH2
+084     @ADDFF.@SCRATCH6
+085     @MULFF.@SCRATCH3
+085     @ADDFF.@SCRATCH7
+086     @ADDFF.@SCRATCH8
+F00     RXF0SIDH
+F01     RXF0SIDL
+F02     RXF0EIDH
+F03     RXF0EIDL
+F04     RXF1SIDH
+F05     RXF1SIDL
+F06     RXF1EIDH
+F07     RXF1EIDL
+F08     RXF2SIDH
+F09     RXF2SIDL
+F0A     RXF2EIDH
+F0B     RXF2EIDL
+F0C     RXF3SIDH
+F0D     RXF3SIDL
+F0E     RXF3EIDH
+F0F     RXF3EIDL
+F10     RXF4SIDH
+F11     RXF4SIDL
+F12     RXF4EIDH
+F13     RXF4EIDL
+F14     RXF5SIDH
+F15     RXF5SIDL
+F16     RXF5EIDH
+F17     RXF5EIDL
+F18     RXM0SIDH
+F19     RXM0SIDL
+F1A     RXM0EIDH
+F1B     RXM0EIDL
+F1C     RXM1SIDH
+F1D     RXM1SIDL
+F1E     RXM1EIDH
+F1F     RXM1EIDL
+F20     TXB2CON
+F21     TXB2SIDH
+F22     TXB2SIDL
+F23     TXB2EIDH
+F24     TXB2EIDL
+F25     TXB2DLC
+F26     TXB2D0
+F2D     TXB2D7
+F30     TXB1CON
+F31     TXB1SIDH
+F32     TXB1SIDL
+F33     TXB1EIDH
+F34     TXB1EIDL
+F35     TXB1DLC
+F36     TXB1D0
+F3D     TXB1D7
+F40     TXB0CON
+F41     TXB0SIDH
+F42     TXB0SIDL
+F43     TXB0EIDH
+F44     TXB0EIDL
+F45     TXB0DLC
+F46     TXB0D0
+F4D     TXB0D7
+F50     RXB1CON
+F51     RXB1SIDH
+F52     RXB1SIDL
+F53     RXB1EIDH
+F54     RXB1EIDL
+F55     RXB1DLC
+F60     TXBaCON
+F60     RXB0CON
+F61     RXB0SIDH
+F62     TXRXBaSIDL
+F62     RXB0SIDL
+F63     RXB0EIDH
+F64     RXB0EIDL
+F64     TXRXBaEIDL
+F65     RXBaDLC
+F65     TXBaDLC
+F65     RXB0DLC
+F66     TXRXBaD0
+F66     RXB0D0
+F6D     TXRXBaD7
+F6D     RXB0D7
+F6E     CANSTAT
+F6F     CANCON
+F70     BRGCON1
+F71     BRGCON2
+F72     BRGCON3
+F73     CIOCON
+F74     COMSTAT
+F75     RXERRCNT
+F76     TXERRCNT
+FA4.0   CAN_INT_RXB0IF
+FA4.1   CAN_INT_RXB1IF
+FA4.2   CAN_INT_TXB0IF
+FA4.3   CAN_INT_TXB1IF
+FA4.4   CAN_INT_TXB2IF
+FA4.5   CAN_INT_ERRIF
+FA4.6   CAN_INT_WAKIF
+FA4.7   CAN_INT_IRXIF
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000AE  isr_timer2
+0000BA  @const1211.call
+0000DE  @const1213.call
+0000EC  @const1214.call
+000106  @const1225.call
+00011E  @const1226.call
+000144  @const1235.call
+000162  @const1236.call
+000170  @const1242.call
+000182  @const1243.call
+00019C  @const1244.call
+0001BE  @const1247.call
+0001D8  @const1248.call
+0001EA  @PSTRINGC_38400_31766_31767
+00020C  can_set_mode
+00022E  can_set_baud
+00025E  can_set_id
+00038E  can_init
+00046A  @delay_ms1
+000490  comstart
+0004D8  comreset
+00051C  sht_init
+000528  comwrite
+000592  comwait
+0005CA  comread
+000676  measuretemp
+00069E  @ITOF
+0006D4  measurehumid
+0006FC  @MULFF
+0007EE  @ADDFF
+000A58  @PSTRINGCN_38400_31766_31767
+000A78  @FTOSD
+000AB8  @DIV3232
+000B46  @PRINTF_L32D_38400_31766_31767FPFPF
+000CC6  can_get_id
+000EA8  @DIV88
+000ED0  @PRINTF_U_38400_31766_31767
+000F3C  @PRINTF_L32U_38400_31766_31767
+000FE2  @PRINTF_X_38400_31766_31767
+001024  can_putd
+0010E6  @cinit1
+0010E6  MAIN
+001106  @cinit2
+0011E0  sht_rd
+001214  calculate_data
+001554  can_getd
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    D:\du lieu\BSD\BSD datasheet\SHT75\sht_pic_18f2480_can transfer\REPORT SHT BME280 TRANSFER\
+
+Project Files:
+    main.c                                                  [10-Thg11-17 08:15  CRC=EE626F2A]
+    C:\Program Files (x86)\PICCV5025\Devices\18F2480.h      [16-Thg10-17 16:31  CRC=8D6AE115]
+    C:\Program Files (x86)\PICCV5025\Drivers\can-18xxx8.c   [10-Thg1-13 11:22  CRC=12402CA3]
+    C:\Program Files (x86)\PICCV5025\Drivers\can-18xxx8.h   [10-Thg1-13 11:19  CRC=624EB0FF]
+    sht71.c                                                 [19-Thg8-17 13:02  CRC=82CB47DC]
+    C:\Program Files (x86)\PICCV5025\Drivers\stdlib.h       [08-Thg6-11 14:39  CRC=0B6669CF]
+    C:\Program Files (x86)\PICCV5025\Drivers\stddef.h       [16-Thg7-10 09:27  CRC=897CEC6C]
+    C:\Program Files (x86)\PICCV5025\Drivers\string.h       [10-Thg4-14 09:04  CRC=662B2714]
+    C:\Program Files (x86)\PICCV5025\Drivers\ctype.h        [03-Thg1-08 13:55  CRC=2D1F019F]
+
+Source signature=C873F64A
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F2480
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

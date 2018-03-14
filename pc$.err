@@ -1,0 +1,4 @@
+*** Error 12 "main.c" Line 160(25,26): Undefined identifier  -- readMax
+*** Error 12 "main.c" Line 162(76,82): Undefined identifier   spival
+      2 Errors,  0 Warnings.
+Build Failed.

@@ -1,0 +1,5 @@
+>>> Warning 208 "D:\du lieu\BSD\BSD datasheet\SHT75\sht_pic_18f2480_can transfer\REPORT SHT BME280 TRANSFER\sht71.c" Line 174(7,18): Function not void and does not return a value  measuretemp
+>>> Warning 208 "D:\du lieu\BSD\BSD datasheet\SHT75\sht_pic_18f2480_can transfer\REPORT SHT BME280 TRANSFER\sht71.c" Line 190(7,19): Function not void and does not return a value  measurehumid
+      Memory usage:   ROM=41%      RAM=9% - 18%
+      0 Errors,  2 Warnings.
+Build Successful.
