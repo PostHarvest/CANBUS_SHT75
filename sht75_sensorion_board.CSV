@@ -1,0 +1,18 @@
+"Bill of Material for "
+"On 05/02/2018 at 9:54:01 SA"
+
+"Comment","Pattern","Quantity","Components"
+
+"10k","RES-SMD-1206","1","R14","Resistor 1/4W"
+"10k","SM-RES-1206","2","R15, RP","Resistor 1/4W"
+"12Mhz","XT2","1","X1","Crystal, 32.768 KHz, -40 to 85 degC, 3.2 x 1.5 x 0.9 mm SMD"
+"22pF","CN1","2","C11, C12","Cremic For Xtal 1pF => 100pF"
+"470","SM-RES-1206","1","R13","Resistor 1/4W"
+"Cap Pol3","C0805","3","C1, C13, C14","Polarized Capacitor (Surface Mount)"
+"Header 4","HDR1X4","2","CAN, SHT75","Header, 4-Pin"
+"Header 6","HDR1X6","1","ICSP","Header, 6-Pin"
+"Header2","HDR2","1","232","Header IDC, 2 x 1 Pin Vertical 2.54mm Pitch (Non-Boxed, Male)"
+"LED","LED-3MM-YELLOW","1","P","LED Single colour Green and Red"
+"MCP2551-E/SN","SOIC-SN8_N","1","U1","High-Speed CAN Transceiver, 8-Pin SOIC, Extended Temperature"
+"PIC18F2480T-I/SO","SOIC-SO28_L","1","U0","Enhanced Flash Microcontroller with ECAN Technology, 10-Bit A/D and nanoWatt Technology, 16K Flash, 28-Pin SOIC, Industrial Temperature Range, Tape and Reel"
+"Res3","J1-0603","2","R1, R12","Resistor"
